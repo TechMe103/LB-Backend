@@ -6,7 +6,8 @@ const User = require('./models/User');
 const ClaimHistory = require('./models/ClaimHistory');
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({ origin: 'https://lb-frontend-qduk.vercel.app/' }));
 app.use(express.json());
 
 // mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
